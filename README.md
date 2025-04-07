@@ -1,4 +1,4 @@
-# Functional Programming Practical Assignment
+# Fractal Generation Using Haskell
 
 ## Building the project
 

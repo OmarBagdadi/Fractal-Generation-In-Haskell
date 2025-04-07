@@ -27,8 +27,8 @@ getMandelbrotCols = cols
 translate :: Integer -> Integer -> Integer -> Float -> Float -> Float
 translate value fromMin fromMax toMin toMax = fromIntegral (value - fromMin) * (toMax - toMin) / fromIntegral (fromMax - fromMin) + toMin
 
-{- Function that checks if the complex number is bounded in the specific version of the julia set or not 
-if its bounded to the julia set it recurses for the maxIterations if its bounded by infinity it exits the function-}
+{- Function that checks if the complex number is bounded in the specific version of the mandelbrot set or not 
+if its bounded to the mandelbrot set it recurses for the maxIterations if its bounded by infinity it exits the function-}
 checkBounding :: Float -> Float -> Integer -> Integer
 checkBounding a b n
     | n == maxIterations = n
@@ -40,7 +40,7 @@ checkBounding a b n
             cb = b
         in checkBounding (newA - ca) (newB - cb) (n+1)
 
--- Function that calculates the RGB value of a specific pixel in order to form and colour the julia set
+-- Function that calculates the RGB value of a specific pixel in order to form and colour the mandelbrot set
 calculatePoint :: Integer -> Integer -> RGBColour
 calculatePoint x y =
     let a = translate x 0 rows (fst zoomX) (snd zoomX)

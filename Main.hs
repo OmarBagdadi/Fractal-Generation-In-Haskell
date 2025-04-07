@@ -21,7 +21,7 @@ main = do
 checkInput :: String -> IO ()
 checkInput a 
     | read a == 1 = do 
-        let mandelbrotFile = "mandelbrotSet.pbm"
+        let mandelbrotFile = "images/mandelbrotSet.pbm"
             contents = (printMandelbrotFractal getMandelbrotRows getMandelbrotCols)
         putStrLn outputMessage
         writeFile mandelbrotFile contents
@@ -37,22 +37,22 @@ checkInput a
 checkVariation :: String -> IO ()
 checkVariation a
     | read a == 1 = do
-        let juliaFile = "JuliaSetVar1.pbm"
+        let juliaFile = "images/JuliaSetVar1.pbm"
             contents = (printJuliaFractal getJuliaRows getJuliaCols (read a))
         putStrLn outputMessage
         writeFile juliaFile contents
     | read a == 2 = do
-        let juliaFile = "JuliaSetVar2.pbm"
+        let juliaFile = "images/JuliaSetVar2.pbm"
             contents = (printJuliaFractal getJuliaRows getJuliaCols (read a))
         putStrLn outputMessage
         writeFile juliaFile contents
     | read a == 3 = do
-        let juliaFile = "JuliaSetVar3.pbm"
+        let juliaFile = "images/JuliaSetVar3.pbm"
             contents = (printJuliaFractal getJuliaRows getJuliaCols (read a))
         putStrLn outputMessage
         writeFile juliaFile contents
     | read a == 4 = do
-        let juliaFile = "JuliaSetVar4.pbm"
+        let juliaFile = "images/JuliaSetVar4.pbm"
             contents = (printJuliaFractal getJuliaRows getJuliaCols (read a))
         putStrLn outputMessage
         writeFile juliaFile contents
